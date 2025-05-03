@@ -1,0 +1,8 @@
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: addr-pool
+  namespace: kube-system
+spec:
+  addresses:
+  - 192.168.12.30-192.168.12.100
