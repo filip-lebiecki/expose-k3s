@@ -1,3 +1,5 @@
+# Youtube Video [Exposing K3s in HA mode](https://youtu.be/W0lBXlfVVIw?si=XQAelb_DdDsnS2cR)
+
 # Install k3s in HA mode
 
 ```
@@ -46,10 +48,10 @@ sudo vi /etc/netplan/network.yaml
 
 sudo netplan try
 ip -4 -br a s dev eth0
-cat /etc/keepalived/keepalived.conf
+cat /etc/keepalived/keepalived.conf              #master
 sudo systemctl start keepalived 
 sudo systemctl status keepalived
-node2: cat /etc/keepalived/keepalived.conf     
+node2: cat /etc/keepalived/keepalived.conf       #backup
 node2: sudo systemctl start keepalived
 node3: sudo systemctl start keepalived
 ```
